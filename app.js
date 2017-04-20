@@ -15,7 +15,7 @@ var app = express();
 
 var mongo_pw = process.env.MONGO_PW;
 var url = process.env.MONGO_URL;
-//var url = 'mongodb://myUserAdmin:' + mongo_pw + '@localhost:27017/garden?authSource=admin';
+var url = 'mongodb://gardener:Tng621180@ds139937.mlab.com:39937/flower';
 MongoClient.connect(url,function(err,db){
   assert.equal(null,err);
   console.log('connected to MongoDB');
