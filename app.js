@@ -14,7 +14,7 @@ var users = require('./routes/users');
 var app = express();
 
 var mongo_pw = process.env.MONGO_PW;
-var url = 'mongodb://' + 'localhost:27017/garden';
+var url = process.env.MONGO_URL;
 //var url = 'mongodb://myUserAdmin:' + mongo_pw + '@localhost:27017/garden?authSource=admin';
 MongoClient.connect(url,function(err,db){
   assert.equal(null,err);
